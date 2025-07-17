@@ -5,13 +5,13 @@ const formattedSeconds = (sec: number) =>
 
 interface LapProps {
   index: number;
-  lap: number;
+  lapSeconds: number;
   onDelete: () => void;
 }
 
 const Lap = (props: LapProps) => (
-  <div key={props.index} className="stopwatch-lap">
-    <strong>{props.index}</strong>/ {formattedSeconds(props.lap)}{" "}
+  <div className="stopwatch-lap">
+    <strong>{props.index}</strong>/ {formattedSeconds(props.lapSeconds)}{" "}
     <button onClick={props.onDelete}> X </button>
   </div>
 );
@@ -131,7 +131,7 @@ export default class Stopwatch extends Component<StopwatchProps, StopwatchState>
             <Lap
               key={lap.key}
               index={i + 1}
-              lap={lap.value}
+              lapSeconds={lap.value}
               onDelete={() => this.handleDeleteClick(i)}
             />
           ))}
