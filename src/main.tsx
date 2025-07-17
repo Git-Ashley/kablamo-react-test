@@ -42,6 +42,9 @@ import Stopwatch from './Stopwatch';
  *   - Create types for component state (2nd argument to React.Component)
  *     - incrementer instance variable could have 'number | null' type. We'll also need to ensure null-checking when using clearInterval.
  *   - Create an interface for LapProps, and ensure onDelete has 'void' return type.
+ *
+ *
+ *   A corrected version of the class component is given in ./OldSchoolStopwatch, while a more modern version with hooks is given in ./Stopwatch.tsx
  */
 
 
